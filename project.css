@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add the background image */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://media.istockphoto.com/id/1281071887/photo/interior-of-modern-grocery-store.jpg');
+    
+    /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    /* Lower opacity for the background */
+    z-index: -1;
+    /* Place the background behind the content */
+}
+
+.container {
+    width: 90%;
+    /* Make the container responsive */
+    max-width: 600px;
+    /* Limit the width */
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 80vh;
+    /* Adjust height to fill most of the screen */
+    overflow-y: auto;
+    /* Add scrolling if content overflows */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    flex: 1;
+    height: 40px;
+    /* Ensure consistent height */
+    padding: 10px;
+    /* margin-bottom: 10px; */
+}
+
+.input-group button {
+    height: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eee;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.task-text {
+    flex: 1;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.btn-edit,
+.btn-delete {
+    background: #f1c40f;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.btn-delete {
+    background: #e74c3c;
+}
+
+.error-message {
+    color: #d9534f;
+    text-align: left;
+    margin-top: 8px;
+    font-size: 14px;
+    visibility: hidden;
+}
